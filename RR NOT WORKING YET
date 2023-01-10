@@ -1,0 +1,18 @@
+//Round Robin Scheduling
+
+
+
+void RR(processes P[],int n)
+{
+   int pflag=0,t,tcurr=0,k,i,Q=0;
+   int sumw=0,sumt=0;
+   float avgwt=0.0,avgta=0.0;
+   processes temp1[10],temp2[10];
+
+   for(i=0;i<n;i++)
+       temp1[i]=P[i];
+
+   sortFunction(temp1,n);
+
+   for(i=0;i<n;i++)
+       temp2[i]=temp1[i];
